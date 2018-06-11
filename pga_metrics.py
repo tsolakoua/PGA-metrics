@@ -28,7 +28,7 @@ def search_by_language(data, input_language):
 	for i in range(len(data)):
 		row = data.iloc[i]
 		try:
-			if "Perl" in row.LANGS:
+			if input_language in row.LANGS:
 				languages.append(row.URL)
 				count = count + 1
 		except TypeError:
